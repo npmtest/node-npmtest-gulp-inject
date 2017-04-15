@@ -1,6 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <title>Code coverage report for node-npmtest-gulp-inject/gulp-inject/src/transform/index.js</title>
     <meta charset="utf-8">
     <style>
@@ -210,11 +208,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-inject/gulp-inject/src/transform/</a> &#187; index.js</div>
+    <div class="path"><a href="../../../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-inject/gulp-inject/src/transform/</a> » index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tr><td class="line-count">1
+<tbody><tr><td class="line-count">1
 2
 3
 4
@@ -693,18 +691,18 @@ var DEFAULT_TARGET = TARGET_TYPES[0];
 /**
  * Transform module
  */
-var transform = module.exports = exports = <span class="fstat-no" title="function not covered" >function (filepath, i, length, sourceFile, targetFile) {</span>
-<span class="cstat-no" title="statement not covered" >  var type;</span>
-<span class="cstat-no" title="statement not covered" >  if (targetFile &amp;&amp; targetFile.path) {</span>
-<span class="cstat-no" title="statement not covered" >    var ext = extname(targetFile.path);</span>
-<span class="cstat-no" title="statement not covered" >    type = typeFromExt(ext);</span>
+var transform = module.exports = exports = <span class="fstat-no" title="function not covered">function (filepath, i, length, sourceFile, targetFile) {</span>
+<span class="cstat-no" title="statement not covered">  var type;</span>
+<span class="cstat-no" title="statement not covered">  if (targetFile &amp;&amp; targetFile.path) {</span>
+<span class="cstat-no" title="statement not covered">    var ext = extname(targetFile.path);</span>
+<span class="cstat-no" title="statement not covered">    type = typeFromExt(ext);</span>
   }
-<span class="cstat-no" title="statement not covered" >  if (!isTargetType(type)) {</span>
-<span class="cstat-no" title="statement not covered" >    type = DEFAULT_TARGET;</span>
+<span class="cstat-no" title="statement not covered">  if (!isTargetType(type)) {</span>
+<span class="cstat-no" title="statement not covered">    type = DEFAULT_TARGET;</span>
   }
-<span class="cstat-no" title="statement not covered" >  var func = transform[type];</span>
-<span class="cstat-no" title="statement not covered" >  if (func) {</span>
-<span class="cstat-no" title="statement not covered" >    return func.apply(transform, arguments);</span>
+<span class="cstat-no" title="statement not covered">  var func = transform[type];</span>
+<span class="cstat-no" title="statement not covered">  if (func) {</span>
+<span class="cstat-no" title="statement not covered">    return func.apply(transform, arguments);</span>
   }
 };
 &nbsp;
@@ -718,115 +716,115 @@ transform.selfClosingTag = false;
  * Transform functions
  */
 TARGET_TYPES.forEach(function (targetType) {
-  transform[targetType] = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >    var ext = extname(filepath);</span>
-<span class="cstat-no" title="statement not covered" >    var type = typeFromExt(ext);</span>
-<span class="cstat-no" title="statement not covered" >    var func = transform[targetType][type];</span>
-<span class="cstat-no" title="statement not covered" >    if (func) {</span>
-<span class="cstat-no" title="statement not covered" >      return func.apply(transform[targetType], arguments);</span>
+  transform[targetType] = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">    var ext = extname(filepath);</span>
+<span class="cstat-no" title="statement not covered">    var type = typeFromExt(ext);</span>
+<span class="cstat-no" title="statement not covered">    var func = transform[targetType][type];</span>
+<span class="cstat-no" title="statement not covered">    if (func) {</span>
+<span class="cstat-no" title="statement not covered">      return func.apply(transform[targetType], arguments);</span>
     }
   };
 });
 &nbsp;
-transform.html.css = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;link rel="stylesheet" href="' + filepath + '"' + end();</span>
+transform.html.css = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;link rel="stylesheet" href="' + filepath + '"' + end();</span>
 };
 &nbsp;
-transform.html.js = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;script src="' + filepath + '"&gt;&lt;/script&gt;';</span>
+transform.html.js = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;script src="' + filepath + '"&gt;&lt;/script&gt;';</span>
 };
 transform.html.map = transform.html.js;
 &nbsp;
-transform.html.jsx = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;script type="text/jsx" src="' + filepath + '"&gt;&lt;/script&gt;';</span>
+transform.html.jsx = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;script type="text/jsx" src="' + filepath + '"&gt;&lt;/script&gt;';</span>
 };
 &nbsp;
-transform.html.html = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;link rel="import" href="' + filepath + '"' + end();</span>
+transform.html.html = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;link rel="import" href="' + filepath + '"' + end();</span>
 };
 &nbsp;
-transform.html.coffee = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;script type="text/coffeescript" src="' + filepath + '"&gt;&lt;/script&gt;';</span>
+transform.html.coffee = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;script type="text/coffeescript" src="' + filepath + '"&gt;&lt;/script&gt;';</span>
 };
 &nbsp;
-transform.html.image = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '&lt;img src="' + filepath + '"' + end();</span>
+transform.html.image = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '&lt;img src="' + filepath + '"' + end();</span>
 };
 &nbsp;
-transform.jade.css = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link(rel="stylesheet", href="' + filepath + '")';</span>
+transform.jade.css = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link(rel="stylesheet", href="' + filepath + '")';</span>
 };
 &nbsp;
-transform.jade.js = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(src="' + filepath + '")';</span>
+transform.jade.js = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.jade.jsx = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(type="text/jsx", src="' + filepath + '")';</span>
+transform.jade.jsx = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(type="text/jsx", src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.jade.jade = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'include ' + filepath;</span>
+transform.jade.jade = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'include ' + filepath;</span>
 };
 &nbsp;
-transform.jade.html = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link(rel="import", href="' + filepath + '")';</span>
+transform.jade.html = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link(rel="import", href="' + filepath + '")';</span>
 };
 &nbsp;
-transform.jade.coffee = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(type="text/coffeescript", src="' + filepath + '")';</span>
+transform.jade.coffee = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(type="text/coffeescript", src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.jade.image = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'img(src="' + filepath + '")';</span>
+transform.jade.image = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'img(src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.css = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link(rel="stylesheet", href="' + filepath + '")';</span>
+transform.pug.css = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link(rel="stylesheet", href="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.js = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(src="' + filepath + '")';</span>
+transform.pug.js = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.jsx = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(type="text/jsx", src="' + filepath + '")';</span>
+transform.pug.jsx = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(type="text/jsx", src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.pug = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'include ' + filepath;</span>
+transform.pug.pug = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'include ' + filepath;</span>
 };
 &nbsp;
-transform.pug.html = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link(rel="import", href="' + filepath + '")';</span>
+transform.pug.html = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link(rel="import", href="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.coffee = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script(type="text/coffeescript", src="' + filepath + '")';</span>
+transform.pug.coffee = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script(type="text/coffeescript", src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.pug.image = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'img(src="' + filepath + '")';</span>
+transform.pug.image = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'img(src="' + filepath + '")';</span>
 };
 &nbsp;
-transform.slm.css = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link rel="stylesheet" href="' + filepath + '"';</span>
+transform.slm.css = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link rel="stylesheet" href="' + filepath + '"';</span>
 };
 &nbsp;
-transform.slm.js = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script src="' + filepath + '"';</span>
+transform.slm.js = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script src="' + filepath + '"';</span>
 };
 &nbsp;
-transform.slm.html = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'link rel="import" href="' + filepath + '"';</span>
+transform.slm.html = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'link rel="import" href="' + filepath + '"';</span>
 };
 &nbsp;
-transform.slm.coffee = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'script type="text/coffeescript" src="' + filepath + '"';</span>
+transform.slm.coffee = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'script type="text/coffeescript" src="' + filepath + '"';</span>
 };
 &nbsp;
-transform.slm.image = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return 'img src="' + filepath + '"';</span>
+transform.slm.image = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return 'img src="' + filepath + '"';</span>
 };
 &nbsp;
 transform.slim.css = transform.slm.css;
@@ -839,34 +837,34 @@ transform.slim.coffee = transform.slm.coffee;
 &nbsp;
 transform.slim.image = transform.slm.image;
 &nbsp;
-transform.haml.css = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '%link{rel:"stylesheet", href:"' + filepath + '"}';</span>
+transform.haml.css = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '%link{rel:"stylesheet", href:"' + filepath + '"}';</span>
 };
 &nbsp;
-transform.haml.js = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '%script{src:"' + filepath + '"}';</span>
+transform.haml.js = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '%script{src:"' + filepath + '"}';</span>
 };
 &nbsp;
-transform.haml.html = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '%link{rel:"import", href:"' + filepath + '"}';</span>
+transform.haml.html = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '%link{rel:"import", href:"' + filepath + '"}';</span>
 };
 &nbsp;
-transform.haml.coffee = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '%script{type:"text/coffeescript", src:"' + filepath + '"}';</span>
+transform.haml.coffee = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '%script{type:"text/coffeescript", src:"' + filepath + '"}';</span>
 };
 &nbsp;
-transform.haml.image = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '%img{src:"' + filepath + '"}';</span>
+transform.haml.image = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '%img{src:"' + filepath + '"}';</span>
 };
 &nbsp;
-transform.less.less = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '@import "' + filepath + '";';</span>
+transform.less.less = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '@import "' + filepath + '";';</span>
 };
 &nbsp;
 transform.less.css = transform.less.less;
 &nbsp;
-transform.sass.sass = <span class="fstat-no" title="function not covered" >function (filepath) {</span>
-<span class="cstat-no" title="statement not covered" >  return '@import "' + filepath + '"';</span>
+transform.sass.sass = <span class="fstat-no" title="function not covered">function (filepath) {</span>
+<span class="cstat-no" title="statement not covered">  return '@import "' + filepath + '"';</span>
 };
 &nbsp;
 transform.sass.scss = transform.sass.sass;
@@ -881,43 +879,44 @@ transform.scss.css = transform.scss.sass;
  * but always with self closing tags, invalid jsx otherwise
  */
 Object.keys(transform.html).forEach(function (type) {
-  transform.jsx[type] = <span class="fstat-no" title="function not covered" >function () {</span>
-<span class="cstat-no" title="statement not covered" >    var originalOption = transform.selfClosingTag;</span>
-<span class="cstat-no" title="statement not covered" >    transform.selfClosingTag = true;</span>
-<span class="cstat-no" title="statement not covered" >    var result = transform.html[type].apply(transform.html, arguments);</span>
-<span class="cstat-no" title="statement not covered" >    transform.selfClosingTag = originalOption;</span>
-<span class="cstat-no" title="statement not covered" >    return result;</span>
+  transform.jsx[type] = <span class="fstat-no" title="function not covered">function () {</span>
+<span class="cstat-no" title="statement not covered">    var originalOption = transform.selfClosingTag;</span>
+<span class="cstat-no" title="statement not covered">    transform.selfClosingTag = true;</span>
+<span class="cstat-no" title="statement not covered">    var result = transform.html[type].apply(transform.html, arguments);</span>
+<span class="cstat-no" title="statement not covered">    transform.selfClosingTag = originalOption;</span>
+<span class="cstat-no" title="statement not covered">    return result;</span>
   };
 });
 &nbsp;
-<span class="fstat-no" title="function not covered" >function end() {</span>
-<span class="cstat-no" title="statement not covered" >  return transform.selfClosingTag ? ' /&gt;' : '&gt;';</span>
+<span class="fstat-no" title="function not covered">function end() {</span>
+<span class="cstat-no" title="statement not covered">  return transform.selfClosingTag ? ' /&gt;' : '&gt;';</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function typeFromExt(ext) {</span>
-<span class="cstat-no" title="statement not covered" >  ext = ext.toLowerCase();</span>
-<span class="cstat-no" title="statement not covered" >  if (isImage(ext)) {</span>
-<span class="cstat-no" title="statement not covered" >    return 'image';</span>
+<span class="fstat-no" title="function not covered">function typeFromExt(ext) {</span>
+<span class="cstat-no" title="statement not covered">  ext = ext.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered">  if (isImage(ext)) {</span>
+<span class="cstat-no" title="statement not covered">    return 'image';</span>
   }
-<span class="cstat-no" title="statement not covered" >  return ext;</span>
+<span class="cstat-no" title="statement not covered">  return ext;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isImage(ext) {</span>
-<span class="cstat-no" title="statement not covered" >  return IMAGES.indexOf(ext) &gt; -1;</span>
+<span class="fstat-no" title="function not covered">function isImage(ext) {</span>
+<span class="cstat-no" title="statement not covered">  return IMAGES.indexOf(ext) &gt; -1;</span>
 }
 &nbsp;
-<span class="fstat-no" title="function not covered" >function isTargetType(type) {</span>
-<span class="cstat-no" title="statement not covered" >  if (!type) {</span>
-<span class="cstat-no" title="statement not covered" >    return false;</span>
+<span class="fstat-no" title="function not covered">function isTargetType(type) {</span>
+<span class="cstat-no" title="statement not covered">  if (!type) {</span>
+<span class="cstat-no" title="statement not covered">    return false;</span>
   }
-<span class="cstat-no" title="statement not covered" >  return TARGET_TYPES.indexOf(type) &gt; -1;</span>
+<span class="cstat-no" title="statement not covered">  return TARGET_TYPES.indexOf(type) &gt; -1;</span>
 }
 &nbsp;
 &nbsp;</pre></td></tr>
-</table></pre>
+</tbody></table></pre>
 </div>
 <div class="footer">
     <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Sat Apr 15 2017 22:23:30 GMT+0000 (UTC)</div>
 </div>
-</body>
-</html>
+
+
+</body></html>
