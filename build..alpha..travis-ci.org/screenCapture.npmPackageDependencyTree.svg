@@ -16,7 +16,7 @@
 <tspan x="10" y="218">  │ ├── stream-combiner@0.0.4 </tspan>
 <tspan x="10" y="234">  │ └── through@2.3.8 </tspan>
 <tspan x="10" y="250">  ├─┬ group-array@0.3.3 </tspan>
-<tspan x="10" y="266">  │ ├── arr-flatten@1.0.2 </tspan>
+<tspan x="10" y="266">  │ ├── arr-flatten@1.0.3 </tspan>
 <tspan x="10" y="282">  │ ├─┬ for-own@0.1.5 </tspan>
 <tspan x="10" y="298">  │ │ └── for-in@1.0.2 </tspan>
 <tspan x="10" y="314">  │ ├── get-value@2.0.6 </tspan>
