@@ -1,6 +1,6 @@
 # npmtest-gulp-inject
 
-#### test coverage for  [gulp-inject (v4.2.0)](https://github.com/klei/gulp-inject)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-inject.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-inject) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-inject.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-inject)
+#### basic test coverage for  [gulp-inject (v4.2.0)](https://github.com/klei/gulp-inject)  [![npm package](https://img.shields.io/npm/v/npmtest-gulp-inject.svg?style=flat-square)](https://www.npmjs.org/package/npmtest-gulp-inject) [![travis-ci.org build-status](https://api.travis-ci.org/npmtest/node-npmtest-gulp-inject.svg)](https://travis-ci.org/npmtest/node-npmtest-gulp-inject)
 
 #### A javascript, stylesheet and webcomponent injection plugin for Gulp, i.e. inject file references into your index.html
 
@@ -10,7 +10,7 @@
 |--:|:--|
 | coverage : | [![istanbul-coverage](https://npmtest.github.io/node-npmtest-gulp-inject/build/coverage.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-inject/build/coverage.html/index.html)|
 | test-report : | [![test-report](https://npmtest.github.io/node-npmtest-gulp-inject/build/test-report.badge.svg)](https://npmtest.github.io/node-npmtest-gulp-inject/build/test-report.html)|
-| build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-inject/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-inject/tree/gh-pages/build)|
+| test-server-github : | [![github.com test-server](https://npmtest.github.io/node-npmtest-gulp-inject/GitHub-Mark-32px.png)](https://npmtest.github.io/node-npmtest-gulp-inject/build/app/index.html) | | build-artifacts : | [![build-artifacts](https://npmtest.github.io/node-npmtest-gulp-inject/glyphicons_144_folder_open.png)](https://github.com/npmtest/node-npmtest-gulp-inject/tree/gh-pages/build)|
 
 - [https://npmtest.github.io/node-npmtest-gulp-inject/build/coverage.html/index.html](https://npmtest.github.io/node-npmtest-gulp-inject/build/coverage.html/index.html)
 
@@ -108,7 +108,8 @@
                 "never"
             ]
         }
-    }
+    },
+    "bin": {}
 }
 ```
 
